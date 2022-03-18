@@ -38,11 +38,16 @@
 
   <div class="col-md-8 offset-md-1">
     <h2>Book detail</h2>
-    <table class="table">
-      <tbody>
-        <%= @books.each do |book| %>
-          <tr><%= book.title %></tr>
+    <table class="table table-hover table-inverse">
+      <thead>
+        <% @books.each do |book| %>
+          <tr>
+            <a>Title</a>
+            <span><%= link_to book.title, book_path(book.id) %></span>
+            <a>Opinion</a>
+            <%= link_to book.body, book_path(book.id) %>
+          </tr>
         <% end %>
-      </tbody>
+      </thead>
     </table>
   </div>
