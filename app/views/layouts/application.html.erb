@@ -23,7 +23,7 @@
             <ul class="navbar-nav ml-auto">
               <% if user_signed_in? %>
                 <li>
-                  <%= link_to users_path(params[:id]) do %>
+                  <%= link_to new_user_session_path do %>
                     <i class="fas fa-home text-light"></i> Home
                   <% end %>
                 </li>
